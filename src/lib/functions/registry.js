@@ -113,7 +113,18 @@ class FunctionsRegistry {
     // If there is no watcher for this function but the build produced files,
     // we create a new watcher and watch them.
     if (srcFilesDiff.added.size !== 0) {
-      const newWatcher = await watchDebounced([...srcFilesDiff.added], {
+      const config = func.config.functions
+      const filesToWatch = [
+        ...srcFilesDiff.added,
+        // Include the manually specified files from config. These files might not be
+        // source files, but might still be used/loaded in the function and therefore
+        // we need to watch them to rebuild once they change
+        ...((config && config[func.name] && config[func.name].included_files) || []).filter(
+          (glob) => !glob.startsWith('!'),
+        ),
+        ...((config && config['*'] && config['*'].included_files) || []).filter((glob) => !glob.startsWith('!')),
+      ]
+      const newWatcher = await watchDebounced(filesToWatch, {
         onChange: () => {
           this.buildFunctionAndWatchFiles(func, { verbose: true })
         },

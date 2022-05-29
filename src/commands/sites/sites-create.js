@@ -92,7 +92,7 @@ const sitesCreate = async (options, command) => {
     let siteName
 
     if (inputOptions.newSiteName) {
-      // eslint-disable-next-line prefer-destructuring
+       
       siteName = inputOptions.newSiteName
     } else {
       const { name: siteNameFromFunc } = await getSiteNameInput(name, user, api)

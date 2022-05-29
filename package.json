@@ -1,5 +1,5 @@
 {
-  "name": "netlify-cli",
+  "name": "@torchlabs/netlify-cli",
   "description": "Netlify command line tool",
   "version": "10.3.3",
   "author": "Netlify Inc.",
@@ -130,7 +130,7 @@
     "Ximena Sandoval <ximena.sandoval.dh@gmail.com> (https://ximenasandoval.github.io)",
     "Yuvi Panda",
     "cesare soldini <cesare.soldini@gmail.com>",
-    "chris (fool) mccraw (http://twitter.com/fool)",
+    "chris (fool)",
     "dustincrogers",
     "ehmicky (https://twitter.com/ehmicky)",
     "internal tools netlibot",
@@ -163,11 +163,14 @@
     "static"
   ],
   "license": "MIT",
-  "repository": "netlify/cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netlify/cli.git"
+  },
   "main": "src/index.js",
   "bin": {
-    "ntl": "./bin/run",
-    "netlify": "./bin/run"
+    "ntl": "bin/run",
+    "netlify": "bin/run"
   },
   "bugs": {
     "url": "https://github.com/netlify/cli/issues"
@@ -358,5 +361,9 @@
     "failWithoutAssertions": false,
     "tap": false,
     "timeout": "5m"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
   }
 }

@@ -530,6 +530,7 @@ const deploy = async (options, command) => {
         accountSlug: options.accountName,
         newSiteName: options.newSiteName,
         funcEnvVariable: options.funcEnvVariable,
+        newSiteDisplayName: options.newSiteDisplayName,
       },
       command,
     )
@@ -730,6 +731,7 @@ Support for package.json's main field, and intrinsic index.js entrypoints are co
     .option('--newSiteName <string>', 'Name of the new site')
     .option('--accountName <string>', 'Account name to create the site in', null)
     .option('--funcEnvVariable <string>', 'Netlify function env variable', null)
+    .option('--newSiteDisplayName <string>', 'Netlify site name', null)
     // *****************************************************************************************
     .option('-d, --dir <path>', 'Specify a folder to deploy')
     .option('-f, --functions <folder>', 'Specify a functions folder to deploy')

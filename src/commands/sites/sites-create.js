@@ -92,19 +92,18 @@ const sitesCreate = async (options, command) => {
     let siteName
 
     if (inputOptions.newSiteName) {
-       
       siteName = inputOptions.newSiteName
     } else {
       const { name: siteNameFromFunc } = await getSiteNameInput(name, user, api)
       siteName = siteNameFromFunc
     }
 
-    const body = {}
+    const body = {
+      name: inputOptions.newSiteDisplayName,
+    }
     if (typeof siteName === 'string') {
       body.name = siteName.trim()
     }
-
-    console.log(JSON.stringify(body))
 
     try {
       site = await api.createSiteInTeam({

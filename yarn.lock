@@ -1033,10 +1033,15 @@
   resolved "https://registry.yarnpkg.com/@netlify/open-api/-/open-api-2.9.0.tgz#3fd18a95c06e7f11aad20b15c1e525accc86369f"
   integrity sha512-XhGmVR8gldH9+3CzBg8C7aj7x/cThzlW/ob/o8ZAGMMJ7aVjs8WqzYpVsjdo4nulYi0zd0enlcuG9VwM1tsJyA==
 
-"@netlify/plugins-list@^6.25.0", "@netlify/plugins-list@^6.26.0":
+"@netlify/plugins-list@^6.25.0":
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.26.0.tgz#0ada946622fdc4b1eb7d17fe5e2cda927c7cabfb"
   integrity sha512-Hl3wCMMLo4En9nW0y+lHWXmxAHqCI01ItT4hQrClsMmImi3rHwHC7Gd3DpNfsqLXZhK1bmcWYxq06N/uwwtihA==
+
+"@netlify/plugins-list@^6.53.1":
+  version "6.57.0"
+  resolved "https://registry.yarnpkg.com/@netlify/plugins-list/-/plugins-list-6.57.0.tgz#269be8eaf64ae6657543a653323ae6f8fc46e72f"
+  integrity sha512-PEHF5QRXiGbL5dNT61iacbzmmcEdW8miVFYm9/P0yvXaRma4d20WLq1eydpXhQhk9tXljQpBEDjB0eDmJieOqg==
 
 "@netlify/run-utils@^4.0.0":
   version "4.0.1"
